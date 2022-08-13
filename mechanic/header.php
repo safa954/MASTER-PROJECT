@@ -55,19 +55,22 @@ session_start();
 
             <!-- Nav Starts -->
             <div class="navbar-collapse  collapse">
-              <ul class="nav navbar-nav navbar-right">
+                            
+  <a href="index.php"><img src="image/logo.png" height="80x" width="90px" ></a>
+              <ul class="nav navbar-nav navbar-right" style="margin-top: 15px;">
                <li><a href="index.php">Home</a></li>
-<?php if(!isset($_SESSION["loggedin"])){?>
+                <li><a href="my-products.php">My Products</a></li>
+                <li><a href="products.php">Show All Products</a></li>
+                  <li><a href="about.php">About</a></li>
+                
+
+                <li><a href="contact.php">Contact</a></li>
+
+                <?php if(!isset($_SESSION["loggedin"])){?>
                   <li > <a href="login.php">Login</a></li>
     <li > <a href="register.php">Register</a></li>
 
 <?php } ?>
-                  <li><a href="about.php">About</a></li>
-                <li><a href="mechanics.php">Mechanics</a></li>
-                  <li><a href="gas.php">Gas</a></li>
-                  <li><a href="track.php">Track</a></li>
-
-                <li><a href="contact.php">Contact</a></li>
                   <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){?>
                       <li > <a href="account.php">Account</a></li>
                   <?php } ?>
@@ -82,22 +85,3 @@ session_start();
         </div>
 
     </div>
-<!-- #Header Starts -->
-
-
-
-
-
-<div class="container">
-
-<!-- Header Starts -->
-<div class="header">
-<a href="index.php"><img src="image/logo.png" height="200x" width="200px" ></a>
-
-              <ul class="pull-right">
-                <li><a href="my-products.php">My Products</a></li>
-                <li><a href="products.php">Show All Products</a></li>
-              </ul>
-</div>
-<!-- #Header Starts -->
-</div>
